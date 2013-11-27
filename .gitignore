@@ -6,3 +6,4 @@ target/classes/AwsCredentials.properties
 # Packages #
 *.jar
 *.war
+.DS_Store

@@ -35,4 +35,5 @@
 	</bean>
 	
 	<import resource="controllers.xml" />
+	<import resource="mysqldatabase.xml"/>
 </beans>
