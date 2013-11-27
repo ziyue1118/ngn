@@ -1,0 +1,8 @@
+# Code #
+src/main/resources/AwsCredentials.properties
+target/classes/AwsCredentials.properties
+# Files #
+*.class
+# Packages #
+*.jar
+*.war
