@@ -1,0 +1,1 @@
+<p>Copyright &copy; Tripfilms.com</p>

@@ -1,0 +1,1 @@
+<p>Welcome to Photo page</p>

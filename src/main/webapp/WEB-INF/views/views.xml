@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" 
+	"http://tiles.apache.org/dtds/tiles-config_2_1.dtd"
+[
+ <!ENTITY baseDir "/WEB-INF/views">
+]>
+
+<tiles-definitions>
+	<definition name="event" extends="baseLayout">
+		<put-attribute name="body" value="&baseDir;/inc/incEvent.jsp" />
+	</definition>
+	
+	<definition name="upload" extends="baseLayout">
+		<put-attribute name="body" value="&baseDir;/inc/incUpload.jsp" />
+	</definition>
+	
+	<definition name="photo" extends="baseLayout">
+		<put-attribute name="body" value="&baseDir;/inc/incPhoto.jsp" />
+	</definition>
+	
+	<definition name="home" extends="baseLayout">
+		<put-attribute name="body" value="&baseDir;/inc/incHome.jsp" />
+	</definition>
+	
+	<definition name="user" extends="baseLayout">
+		<put-attribute name="body" value="&baseDir;/inc/incUser.jsp" />
+	</definition>
+</tiles-definitions>
+
