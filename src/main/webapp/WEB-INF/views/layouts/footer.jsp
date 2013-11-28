@@ -1,1 +1,1 @@
-<p>Copyright &copy; Tripfilms.com</p>
+<p>Copyright &copy; czyxx.com</p>

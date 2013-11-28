@@ -7,23 +7,18 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title><tiles:insertAttribute name="title" ignore="true" /></title>
-    <link href="<c:url value="/resources/css/home.css" />" rel="stylesheet">
-    <script src="<c:url value="/resources/js/home.js" />"></script>
+    <link href="<c:url value="/resources/css/bootstrap.min.css"/>" rel="stylesheet">
+    <link href="<c:url value="/resources/css/home.css"/>" rel="stylesheet">
 </head>
 <body>
-    <table border="1" cellpadding="2" cellspacing="2" align="center">
-        <tr>
-            <td height="30" colspan="2"><tiles:insertAttribute name="header" />
-            </td>
-        </tr>
-        <tr>
-            <td height="250"><tiles:insertAttribute name="menu" /></td>
-            <td width="350"><tiles:insertAttribute name="body" /></td>
-        </tr>
-        <tr>
-            <td height="30" colspan="2"><tiles:insertAttribute name="footer" />
-            </td>
-        </tr>
-    </table>
+    <tiles:insertAttribute name="header" />
+    <tiles:insertAttribute name="menu" />
+    <tiles:insertAttribute name="body" />
+    <tiles:insertAttribute name="footer" />
+    <!-- Button trigger modal -->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="//api.filepicker.io/v1/filepicker.js"></script>
+    <script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
+    <script src="<c:url value="/resources/js/home.js"/>"></script>
 </body>
 </html>

@@ -1,3 +1,14 @@
 body {
-	background: #123445;
+	background-color: #e4e3d5;
+}
+
+.description-box {
+	margin-left: 2px;
+	width:200px;
+}
+
+.form-box {
+	dd {
+		font-size: 100px;
+	}	
 }
