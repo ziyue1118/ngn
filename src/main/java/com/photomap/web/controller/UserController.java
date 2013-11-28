@@ -17,9 +17,10 @@ public class UserController {
 	public ModelAndView handleRequest() throws Exception{
 		ApplicationContext context = new ClassPathXmlApplicationContext("mysqldatabase.xml");
 		IUserDao userjdbc =(IUserDao) context.getBean("IUserDao");
+		User user1 = userjdbc.findByUsername("chenzy");
 		List<User> users = userjdbc.findall();
 		ModelAndView oMAV = new ModelAndView("user");
-		oMAV.addObject("userlist", users);
+		oMAV.addObject("userlist", user1);
 		return oMAV;
 	}
 }

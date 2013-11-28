@@ -4,7 +4,7 @@ import java.io.Serializable;
 public class User implements Serializable{
 	private static final long serialVersionUID = 1L;
 
-	private Long id;
+	private int id;
 	private String username;
 	private String password;
 	private String email;
@@ -12,7 +12,7 @@ public class User implements Serializable{
 	public User(){
 	}
 	
-	public User(Long uid, String uname, String upassword, String uemail){
+	public User(int uid, String uname, String upassword, String uemail){
 		id = uid;
 		username = uname;
 		password = upassword;
@@ -20,7 +20,7 @@ public class User implements Serializable{
 	}
 	//getter and setters: 
 	
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
@@ -36,7 +36,7 @@ public class User implements Serializable{
 		return password;
 	}
 
-	public void setId(Long uid){
+	public void setId(int uid){
 		id = uid;
 	}
 
