@@ -19,6 +19,7 @@
     <!-- Button trigger modal -->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="//api.filepicker.io/v1/filepicker.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script>
     <script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
     <script src="<c:url value="/resources/js/home.js"/>"></script>
 </body>

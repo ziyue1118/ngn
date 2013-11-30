@@ -1,11 +1,17 @@
 body {
 	background-color: #DBDFE2;
 }
-
+.modal-body {
+    position: relative;
+    overflow-y: auto;
+    max-height: 600px;
+    padding: 15px;
+}
 .description-box {
 	margin-left: 2px;
-	width:200px;
+	width:300px;
 }
+
 
 #header-wrapper {
         margin: 0px auto;
@@ -61,4 +67,45 @@ body {
 .footer-item {
         display: inline;
 
+}
+
+#map-canvas {
+        height: 400px;
+        width: 550px;
+        z-index: 20;
+}
+.controls {
+        margin-top: 16px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+#pac-input {
+        background-color: #fff;
+        padding: 0 11px 0 13px;
+        width: 350px;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        text-overflow: ellipsis;
+        }
+
+#pac-input:focus {
+        border-color: #4d90fe;
+        margin-left: -1px;
+        padding-left: 14px;  /* Regular padding-left + 1. */
+        width: 351px;
+      }
+
+
+.modal {
+        z-index: 20;
+}
+.modal-backdrop {
+        z-index:10;
 }

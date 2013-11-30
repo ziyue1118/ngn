@@ -16,6 +16,12 @@
       		<dl>
       			<dt>Photos:</dt><dd><button class="btn btn-default" onclick="pick()">choose file</button>
       			<div id="uploadFilename"></div></dd>
+            <dt>Location: </dt>
+            <dd>
+              <input id="pac-input" class="controls" type="text"
+                placeholder="Enter a location">
+              <div id="map-canvas"></div>
+              </dd>
         		<dt>Descriptions:</dt><dd><textarea class="description-box" rows="2"></textarea></dd>
       		</dl>
       </div>
