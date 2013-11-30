@@ -1,10 +1,9 @@
-<div>
-<h1>MENU</h1>
-<ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/events">Event</a></li>
-    <li><a href="/user">User</a></li>
-    <li><a href="/upload">Upload</a></li>
-    <li><a href="/photo">Photo</a></li>
-</ul>
+<div class="navigation-bar">
+	<div id="navigation-wrapper">
+		  <div class="navi-item"><a href="/">Home</a></div>
+    	  <div class="navi-item"><a href="/events">Event</a></div>
+    	  <div class="navi-item"><a href="/user">User</a></div>
+          <div class="navi-item"><a href="/upload">Upload</a></div>
+          <div class="navi-item"><a href="/photo">Photo</a></div>
+	</div>
 </div>

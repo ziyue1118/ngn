@@ -1,1 +1,6 @@
-<h1>Header</h1>
+<div class = "header">
+    <div id = "header-wrapper">
+      <div class="site-title"><strong>PhotoMap</strong></div>
+      </div>
+    </div>
+</div>
