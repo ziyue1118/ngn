@@ -22,4 +22,7 @@
 		<property name="dataSource" ref="dataSource"/>
 	</bean>
 
+	<bean id="ILocationDao" class="com.photomap.web.dao.impl.ILocationDao">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
 </beans>

@@ -5,7 +5,6 @@ import java.util.List;
 import javax.sql.DataSource;
 
 public interface UserDao {
-	
 	public void save(User user1);
 	public void delete(String username);
 	public User findByUsername(String username);
