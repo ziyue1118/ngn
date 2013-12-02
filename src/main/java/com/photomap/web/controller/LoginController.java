@@ -33,11 +33,10 @@ public class LoginController {
 			return oMAV;
 	 
 		}
-//	 
-//		@RequestMapping(value="/logout", method = RequestMethod.GET)
-//		public String logout(ModelMap model) {
-//	 
-//			return "login";
-//	 
-//		}
+		
+		@RequestMapping(value="/logout", method = RequestMethod.GET)
+		public ModelAndView logout() {
+			ModelAndView oMAV = new ModelAndView("home");
+			return oMAV;
+		}
 }
