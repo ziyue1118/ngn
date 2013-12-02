@@ -22,24 +22,31 @@
               <input id="pac-input" class="controls" type="text"
                 placeholder="Enter a location">
               <div id="map-canvas"></div>
-            <form:form method="POST" action="/upload" commandName="myform">
 
-              <form:input path="locationName"/>
-              <form:input path="latitude"/>
-              <form:input path="longitude"/>
-              <form:input path="description"/>
-              <form:input path="imgurl"/>
-              <form:input path="userId"/>
               
             </dd>
         		<dt>Descriptions:</dt><dd><textarea class="description-box" rows="2"></textarea></dd>
       		</dl>
       </div>
+      <form:form method="POST" action="/upload/photo" commandName="myform">
+      
+			  <form:label path="locationName">locationName</form:label>
+              <form:input path="locationName"/>
+              <form:label path="latitude">latitude</form:label>
+              <form:input path="latitude"/>
+              <form:label path="longitude">longitude</form:label>
+              <form:input path="longitude"/>
+              <form:label path="description">description</form:label>
+              <form:input path="description"/>
+              <form:label path="imgurl">imgurl</form:label>
+              <form:input path="imgurl"/>
+              <form:label path="userId">userId</form:label>
+              <form:input path="userId"/>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <input type="submit" value="Submit" />
       </div>
-    </form:form>
+     </form:form>
     </div>
   </div>
 </div>

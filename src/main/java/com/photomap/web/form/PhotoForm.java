@@ -12,7 +12,7 @@ public class PhotoForm {
 	public String getDescription(){
 		return description;
 	}
-	public String getImgUrl(){
+	public String getImgurl(){
 		return imgurl;
 	}
 	public String getLocationName(){
@@ -33,10 +33,10 @@ public class PhotoForm {
 	public void setDescription(String des){
 		description = des;
 	}
-	public void setImgUrl(String s){
+	public void setImgurl(String s){
 		imgurl = s;
 	}
-	public void setLocationname(String lname){
+	public void setLocationName(String lname){
 		locationName = lname;
 	}
 	public void setLatitude(double lat){

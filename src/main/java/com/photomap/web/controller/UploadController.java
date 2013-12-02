@@ -9,6 +9,7 @@ import com.photomap.web.form.*;
 import com.photomap.web.model.Photo;
 import com.photomap.web.dao.impl.IPhotoDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 
 @Controller
@@ -17,17 +18,25 @@ public class UploadController {
 	@Autowired 
 	private IPhotoDao mPhotoDao;
 
+//	@RequestMapping(method = RequestMethod.GET)
+//	public ModelAndView handleRequest() throws Exception{
+//		ModelAndView oMAV = new ModelAndView("upload");
+//		return oMAV;
+//	}
+	
 	@RequestMapping(method = RequestMethod.GET)
-	public ModelAndView handleRequest() throws Exception{
+	public ModelAndView loadStudentPage() {
 		ModelAndView oMAV = new ModelAndView("upload");
+		oMAV.addObject("myform", new PhotoForm());
 		return oMAV;
 	}
 
 	@RequestMapping(value = "/photo", method = RequestMethod.POST)
 	public ModelAndView uploadphoto(@ModelAttribute("myform")PhotoForm pform, BindingResult result) throws Exception {
 		Photo p = new Photo();
+		System.out.println(pform.getLocationName() + "**********************" + pform.getLatitude());
 		p.setDescription(pform.getDescription());
-		p.setImgUrl(pform.getImgUrl());
+		p.setImgUrl(pform.getImgurl());
 		p.setLocationname(pform.getLocationName());
 		p.setLatitude(pform.getLatitude());
 		p.setLongitude(pform.getLongitude());
