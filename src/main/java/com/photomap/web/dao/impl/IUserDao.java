@@ -12,8 +12,11 @@ public class IUserDao implements UserDao {
 	private DataSource datasource;
 	private JdbcTemplate jdbctemp;
 	public void save(User user1){
-		String sql = "insert into Users(id, username, email, password) values (?,?,?,?)";
-		jdbctemp.update(sql, new Object[]{user1.getId(), user1.getUsername(), user1.getEmail(), user1.getPassword()});
+		String sql = "insert into Users(id, username, enabled, email, password) values (?,?,?,?,?)";
+		jdbctemp.update(sql, new Object[]{user1.getId(), user1.getUsername(), 1, user1.getEmail(), user1.getPassword()});
+		User newUser = findByUsername(user1.getUsername());
+		String sql1 = "insert into user_roles(user_role_id, user_id, authority) values(?,?,?)";
+		jdbctemp.update(sql1, new Object[]{null, newUser.getId(), "ROLE_USER"});
 	}
 	public void delete(String username){
 		 // String sql = "select * from User where id=?";
