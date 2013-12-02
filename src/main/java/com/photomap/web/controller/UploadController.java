@@ -7,16 +7,21 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import com.photomap.web.form.*;
 import com.photomap.web.model.Photo;
-import com.photomap.web.dao.impl.IPhotoDao;
+import com.photomap.web.dao.impl.*;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.security.core.context.SecurityContextHolder;
+
 
 @Controller
 @RequestMapping("/upload")
 public class UploadController {
 	@Autowired 
 	private IPhotoDao mPhotoDao;
+	@Autowired
+	private IUserDao mUserDao;
 
 //	@RequestMapping(method = RequestMethod.GET)
 //	public ModelAndView handleRequest() throws Exception{
@@ -26,13 +31,16 @@ public class UploadController {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView loadStudentPage() {
+		User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		com.photomap.web.model.User oUser = mUserDao.findByUsername(user.getUsername());
 		ModelAndView oMAV = new ModelAndView("upload");
 		oMAV.addObject("myform", new PhotoForm());
+		oMAV.addObject("userid", oUser.getId());
 		return oMAV;
 	}
 
-	@RequestMapping(value = "/photo", method = RequestMethod.POST)
-	public ModelAndView uploadphoto(@ModelAttribute("myform")PhotoForm pform, BindingResult result) throws Exception {
+	@RequestMapping(method = RequestMethod.POST)
+	public ModelAndView uploadphoto(@ModelAttribute("myform")PhotoForm pform) throws Exception {
 		Photo p = new Photo();
 		System.out.println(pform.getLocationName() + "**********************" + pform.getLatitude());
 		p.setDescription(pform.getDescription());
