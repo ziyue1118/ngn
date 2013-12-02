@@ -71,9 +71,9 @@ function initmap() {
     }
 
     infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
-    console.log(place.geometry.location.ob);
-    console.log(place.geometry.location.pb);
-    console.log(place.name);
+    document.getElementById("latitude").value = place.geometry.location.ob;
+    document.getElementById("longitude").value = place.geometry.location.pb;
+    document.getElementById("lname").value = place.name;
     infowindow.open(map, marker);
 });
 }
