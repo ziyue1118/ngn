@@ -34,7 +34,6 @@
 		</property>
 	</bean>
 	<import resource="controllers.xml" />
-	<import resource="mysqldatabase.xml"/>
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 	<mvc:annotation-driven />
 </beans>

@@ -1,1 +1,3 @@
-<p>Welcome to Event page</p>
+
+
+<p>Welcome to Event page, ${name}</p>

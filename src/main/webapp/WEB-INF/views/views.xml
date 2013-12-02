@@ -21,6 +21,7 @@
 	
 	<definition name="home" extends="baseLayout">
 		<put-attribute name="body" value="&baseDir;/inc/incHome.jsp" />
+		<put-attribute name="menu" value="&baseDir;/layouts/blank.jsp" />
 	</definition>
 	
 	<definition name="user" extends="baseLayout">
