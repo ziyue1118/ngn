@@ -1,13 +1,14 @@
 
 //function for filepicker 
 filepicker.setKey('AgcKB8GxpR92mBoDWt96Cz');
-function pick(){
-  filepicker.pick({
+function pick(id){
+  filepicker.pickAndStore({
     mimetypes: ['image/*'],
-  },
+  }, {location:"S3", path: id + "/photos/",access:'public'},
   function(InkBlob){
     console.log(JSON.stringify(InkBlob));
-    document.getElementById('uploadFilename').innerHTML = InkBlob.filename;
+    document.getElementById('uploadFilename').innerHTML = InkBlob[0].filename;
+    document.getElementById("imgurl").value = "s3.amazonaws.com/photomap-czy-xx/"+ InkBlob[0].key;
   },
   function(FPError){
       console.log(FPError.toString());
@@ -73,7 +74,7 @@ function initmap() {
     infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
     document.getElementById("latitude").value = place.geometry.location.ob;
     document.getElementById("longitude").value = place.geometry.location.pb;
-    document.getElementById("lname").value = place.name;
+    document.getElementById("locationName").value = place.name;
     infowindow.open(map, marker);
 });
 }
