@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.photomap.web.form.UserForm;
+
 @Controller
 public class LoginController {
 	
@@ -22,13 +24,13 @@ public class LoginController {
 	 
 		@RequestMapping(value="/login", method = RequestMethod.GET)
 		public ModelAndView login(){
-			ModelAndView oMAV = new ModelAndView("home");
-			return oMAV;
+			return new ModelAndView("redirect:/");
 		}
 	 
 		@RequestMapping(value="/loginfailed", method = RequestMethod.GET)
 		public ModelAndView loginerror() {
 			ModelAndView oMAV = new ModelAndView("home");
+			oMAV.addObject("signupForm", new UserForm());
 			oMAV.addObject("error", "true");
 			return oMAV;
 	 

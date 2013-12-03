@@ -36,13 +36,13 @@ public class UploadController {
 		ModelAndView oMAV = new ModelAndView("upload");
 		oMAV.addObject("myform", new PhotoForm());
 		oMAV.addObject("userid", oUser.getId());
+		oMAV.addObject("name", oUser.getUsername());
 		return oMAV;
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
 	public ModelAndView uploadphoto(@ModelAttribute("myform")PhotoForm pform) throws Exception {
 		Photo p = new Photo();
-		System.out.println(pform.getLocationName() + "**********************" + pform.getLatitude());
 		p.setDescription(pform.getDescription());
 		p.setImgUrl(pform.getImgurl());
 		p.setLocationname(pform.getLocationName());
