@@ -36,7 +36,6 @@ public class LoginController {
 		
 		@RequestMapping(value="/logout", method = RequestMethod.GET)
 		public ModelAndView logout() {
-			ModelAndView oMAV = new ModelAndView("home");
-			return oMAV;
+			return new ModelAndView("redirect:/");
 		}
 }
