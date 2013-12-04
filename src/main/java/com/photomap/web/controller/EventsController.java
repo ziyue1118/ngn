@@ -23,7 +23,7 @@ public class EventsController {
 		User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		com.photomap.web.model.User oUser = mUserDao.findByUsername(user.getUsername());
 		ModelAndView oMAV = new ModelAndView("event");
-		oMAV.addObject("name", oUser.getUsername() + " " + oUser.getId());
+		oMAV.addObject("name", oUser.getUsername());
 		return oMAV;
 	}
 }

@@ -9,12 +9,20 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.photomap.web.dao.impl.*;
 import com.photomap.web.model.*;
 import java.util.List;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.beans.factory.annotation.Autowired;
 @Controller
 @RequestMapping("/user")
 public class UserController {
+	@Autowired
+	private IUserDao mUserDao;
 
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView handleRequest() throws Exception{
+		User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		com.photomap.web.model.User oUser = mUserDao.findByUsername(user.getUsername());
+		
 		ApplicationContext context = new ClassPathXmlApplicationContext("mysqldatabase.xml");
 		//IUserDao userjdbc =(IUserDao) context.getBean("IUserDao");
 		IPhotoDao pjdbc = (IPhotoDao) context.getBean("IPhotoDao");
@@ -32,6 +40,7 @@ public class UserController {
 		ModelAndView oMAV = new ModelAndView("user");
 		//oMAV.addObject("userlist", user1);
 		oMAV.addObject("photos", photos);
+		oMAV.addObject("name", oUser.getUsername());
 		return oMAV;
 	}
 }
