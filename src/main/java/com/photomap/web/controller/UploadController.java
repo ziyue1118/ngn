@@ -42,6 +42,8 @@ public class UploadController {
 
 	@RequestMapping(method = RequestMethod.POST)
 	public ModelAndView uploadphoto(@ModelAttribute("myform")PhotoForm pform) throws Exception {
+		User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		com.photomap.web.model.User oUser = mUserDao.findByUsername(user.getUsername());
 		Photo p = new Photo();
 		p.setDescription(pform.getDescription());
 		p.setImgUrl(pform.getImgurl());
@@ -51,8 +53,8 @@ public class UploadController {
 		p.setUserId(pform.getUserId());
 		mPhotoDao.save(p);
 		ModelAndView oMAV = new ModelAndView("upload");
-		System.out.println("successful");
-	    return oMAV;
+		oMAV.addObject("name", oUser.getUsername());
+		return oMAV;
 
 	}
 }

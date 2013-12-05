@@ -1,3 +1,1 @@
-
-
-<p>Welcome to Event page, ${name}</p>
+Welcome to the posting page;

@@ -9,6 +9,7 @@
     <title><tiles:insertAttribute name="title" ignore="true" /></title>
     <link href="<c:url value="/resources/css/bootstrap.min.css"/>" rel="stylesheet">
     <link href="<c:url value="/resources/css/home.css"/>" rel="stylesheet">
+    <link href="<c:url value="/resources/css/jquery.fancybox.css"/>" rel="stylesheet">
     <link href="<c:url value="http://fonts.googleapis.com/css?family=Indie+Flower"/>" rel="stylesheet">
 </head>
 <body>
@@ -22,5 +23,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script>
     <script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
     <script src="<c:url value="/resources/js/home.js"/>"></script>
+    <script src="<c:url value="/resources/js/jquery.fancybox.pack.js"/>"></script>
 </body>
 </html>

@@ -16,6 +16,20 @@ function pick(id){
   );
 }
 
+$(document).ready(function() {
+  $(".fancybox").fancybox({
+    openEffect  : 'none',
+    closeEffect : 'none',
+    helpers : {
+        title : {
+          type : 'over'
+        },
+        
+    }
+  });
+});
+
+
 //function for maps
 var input = document.getElementById('pac-input');
 function initmap() {
@@ -25,6 +39,7 @@ function initmap() {
   };
   var map = new google.maps.Map(document.getElementById('map-canvas'),
     mapOptions);
+
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
   
 
@@ -72,12 +87,14 @@ function initmap() {
     }
 
     infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
-    document.getElementById("latitude").value = place.geometry.location.ob;
-    document.getElementById("longitude").value = place.geometry.location.pb;
+    console.log(place);
+    document.getElementById("latitude").value = place.geometry.location.pb;
+    document.getElementById("longitude").value = place.geometry.location.qb;
     document.getElementById("locationName").value = place.name;
     infowindow.open(map, marker);
 });
 }
+google.maps.event.addDomListener(window, 'load', initmap);
 
 $('#UploadModal').on('shown.bs.modal', function () {
     initmap();
