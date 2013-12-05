@@ -95,8 +95,15 @@ function initmap() {
 });
 }
 google.maps.event.addDomListener(window, 'load', initmap);
+google.maps.event.addDomListener(window, 'load', pmap);
 
-$('#UploadModal').on('shown.bs.modal', function () {
-    initmap();
-});
+
+function pmap(){
+  
+  
+}
+
+// $('#UploadModal').on('shown.bs.modal', function () {
+//     initmap();
+// });
 

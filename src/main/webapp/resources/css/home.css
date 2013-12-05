@@ -207,3 +207,25 @@ body {
     display: inline;
     margin-left: 180px;
 }
+/*On the map Page*/
+.map-wrapper{
+    background-color: #fff;
+    border: 1px solid #c4cde0;
+    -webkit-border-radius: 0 0 2px 2px;
+    border-top: 0;
+    width: 1000px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin:auto;
+
+}
+#map {
+    height:500px;
+    width:950px;
+    margin:auto;
+    
+}
+.map-window-photo {
+    height:280px;
+    width:380px;
+}
