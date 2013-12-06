@@ -25,6 +25,11 @@ public class IPhotoDao implements PhotoDao {
 		List<Photo> photos = jdbctemp.query(sql, new PhotoMapper());
 		return photos;
 	}
+	public List<Photo> findallLatestPhotos(){
+		String sql = "select * from Photos order by createtime DESC";
+		List<Photo> photos = jdbctemp.query(sql, new PhotoMapper());
+		return photos;
+	}
 
 	public void setDataSource(DataSource ds){
 		this.datasource = ds;

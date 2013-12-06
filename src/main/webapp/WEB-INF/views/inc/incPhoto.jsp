@@ -22,13 +22,6 @@
       maxWidth: 400,
       maxHeigth: 300
     });
-	
-	var iconURLPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
-	var shadow = {
-      anchor: new google.maps.Point(15,33),
-      url: iconURLPrefix + 'msmarker.shadow.png'
-    };
-
 	for(var i=0;i<data.length;i++){
 		var l = new google.maps.LatLng(data[i].pb, data[i].qb, true);
 		var marker = new google.maps.Marker({

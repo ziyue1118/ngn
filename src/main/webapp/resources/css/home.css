@@ -61,7 +61,7 @@ body {
 }
 .header{
         height:60px ;
-        background: rgb(81, 127, 164);/* ins blue*/
+        background: rgb(81, 127, 164);/* instagram blue*/
         margin:0px auto;
 }
 .site-title{
@@ -86,7 +86,7 @@ body {
         padding-top: 10px;
 }
 .navi-item {
-        margin-left: 120px;
+        margin-left: 142px;
         font-size: 20px;
         font-family:'Indie Flower', cursive;
         color:#FFFFFF;
@@ -151,15 +151,61 @@ body {
 .modal-backdrop {
         z-index:10;
 }
-/*On posting page*/
+/* On posting page */
 .posting-container {
-    background: #e0e1e2;
+    background: #BCBEC0;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-width: 0 1px;
-    min-width: 240px;
-    max-width: 512px;
+     -webkit-border-radius: 0 0 2px 2px;
+    width: 600px;
+    margin:auto;
+    padding-top: 3px;
+    padding-bottom:10px;
 }
-/*On user photo page*/
+.posting-photo-container {
+    background-color: rgba(255, 255, 253, 0.71);
+    border:1px solid #c4cde0;
+    -webkit-border-radius: 0 0 2px 2px;
+    width:500px;
+    margin: auto;
+    margin-top: 20px;
+   /* padding-bottom: 50px;*/
+}
+
+.posting-photo {
+    height:498px;
+    width:498px;
+}
+.posting-text-container {
+    font-size: 14px;
+    margin:10px;
+    
+}
+.username-text-box {
+    width:400px;
+}
+.username-text {
+    color: #3f729b;
+    font-weight: 700;
+    width:200px;
+}
+.date-text {
+    color: #999999;
+    font-size:12px;
+    display: inline;
+
+}
+.description-text-box {
+    width:480px;
+}
+.description-text {
+    color: #000;
+    font-family: sans-serif;
+    width:480px;
+    word-wrap:break-word;
+
+}
+/* On user photo page */
 .big-photo-container{
     background-color: #fff;
     border: 1px solid #c4cde0;

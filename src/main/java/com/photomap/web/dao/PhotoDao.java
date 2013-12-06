@@ -8,5 +8,6 @@ public interface PhotoDao {
 	public void save(Photo p);
 	public List<Photo> findallbyUserId(int userid);
 	public List<Photo> findallPhotos();
+	public List<Photo> findallLatestPhotos();
 	public void setDataSource(DataSource ds);
 }
