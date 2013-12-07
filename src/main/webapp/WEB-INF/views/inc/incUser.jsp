@@ -12,7 +12,7 @@
 	</div>
 </div>
 
-<c:forEach var="photo" items="${photos}">
+<!-- <c:forEach var="photo" items="${photos}">
 ${photo.photoId}
 ${photo.description}
 ${photo.imgUrl}
@@ -22,5 +22,5 @@ ${photo.longitude}
 ${photo.createdTime}
 ${photo.userId}
 </br>
-</c:forEach>
+</c:forEach> -->
 

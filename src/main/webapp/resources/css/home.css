@@ -13,7 +13,7 @@ body {
     height:50px;
 }
 
-/*for login error message*/
+/*On the home page*/
 .errorblock {
     color: #ff0000;
     background-color: #ffEEEE;
@@ -30,6 +30,97 @@ body {
 }
 .login-input {
     width:130px;
+    height:30px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    margin-left:1px;
+}
+.signin-input{
+    height:32px;
+}
+.home-wrapper {
+    margin:auto;
+    width:1000px;
+}
+.home-container{
+    margin:auto;
+    margin-top: 10px;
+    width:1000px;
+    overflow: auto;
+}
+.carousel-container{
+        display:inline-block;
+        float:left;
+        width: 550px;
+        border-radius: 5px;
+        margin-left: 10px; 
+        height:370px; 
+        padding:10px;
+
+}
+
+.signup-container{
+        display: inline-block;
+        float:right;
+        width:   400px;
+        padding: 10px;
+
+}
+
+
+#sign-up-box {
+        padding: 10px;
+        padding-top: 0px;
+        border: 1px solid rgb(184, 168, 168);
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        height:300px;
+        
+        /* background-color:rgba(59, 117, 250, 0.1); */
+}
+.signup-input {
+    width:189px;
+}
+.carousel-image {
+    width:auto;
+    height:300px;
+}
+.carousel-inner-image img {
+    width: auto;
+    height:300px;
+}
+
+#sign-up-box .box-title-wrapper {
+        position: relative;
+        top: -26px;
+        left: 2px;
+        width: 128px;
+        color: #2b69a4;
+}
+#sign-up-box .box-title{
+        padding:0px;
+        margin-top: -8px;
+        background-color: #fff;
+
+}
+
+#sign-up-box .box-content {
+        position: relative;
+        top: -12px;
+        margin: 10px;
+        clear: left;
+}
+#sign-up-box .box-content .sign-up-field {
+        margin-top: 20px;
+        font-size:  13px;
+
+}
+#sign-up-box .box-content .sign-up-field .label-wrapper {
+        width: 138px;
+        line-height: 30px;
+        font-family: 'Varela Round', sans-serif;
+        font-size: 15px;
 }
 #logout-wrapper {
     display:block;
@@ -275,3 +366,5 @@ body {
     height:280px;
     width:380px;
 }
+
+

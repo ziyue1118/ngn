@@ -11,6 +11,8 @@
     <link href="<c:url value="/resources/css/home.css"/>" rel="stylesheet">
     <link href="<c:url value="/resources/css/jquery.fancybox.css"/>" rel="stylesheet">
     <link href="<c:url value="http://fonts.googleapis.com/css?family=Indie+Flower"/>" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script>
 </head>
 <body>

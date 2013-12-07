@@ -18,9 +18,9 @@
     <div class="loginForm" onload='document.f.j_username.focus();'>
     	<form name='f' action="<c:url value='j_spring_security_check' />"
     	method='POST' >
-		Username<input class="login-input" type="text" name='j_username' value=''>
-		Password<input class="login-input" type="password" name='j_password' />
-				<input name="submit" type="submit"
+		<input class="login-input" placeholder="Username" type="text" name='j_username' value=''>
+		<input class="login-input" placeholder="Password" type="password" name='j_password' />
+				<input class="btn btn-primary signin-input" name="submit" type="submit"
     	value="Signin" />
     	</form>
 	</div>
