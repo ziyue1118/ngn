@@ -88,8 +88,8 @@ function initmap() {
 
     infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
     console.log(place);
-    document.getElementById("latitude").value = place.geometry.location.pb;
-    document.getElementById("longitude").value = place.geometry.location.qb;
+    document.getElementById("latitude").value = place.geometry.location.lat();
+    document.getElementById("longitude").value = place.geometry.location.lng();
     document.getElementById("locationName").value = place.name;
     infowindow.open(map, marker);
 });
