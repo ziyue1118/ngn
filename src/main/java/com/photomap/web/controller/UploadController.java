@@ -1,27 +1,27 @@
 package com.photomap.web.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import com.photomap.web.form.*;
+
+import com.photomap.web.dao.PhotoDao;
+import com.photomap.web.dao.UserDao;
+import com.photomap.web.form.PhotoForm;
 import com.photomap.web.model.Photo;
-import com.photomap.web.dao.impl.*;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
-import org.springframework.security.core.context.SecurityContextHolder;
 
 
 @Controller
 @RequestMapping("/upload")
 public class UploadController {
 	@Autowired 
-	private IPhotoDao mPhotoDao;
+	private PhotoDao mPhotoDao;
 	@Autowired
-	private IUserDao mUserDao;
+	private UserDao mUserDao;
 
 //	@RequestMapping(method = RequestMethod.GET)
 //	public ModelAndView handleRequest() throws Exception{
@@ -37,6 +37,7 @@ public class UploadController {
 		oMAV.addObject("myform", new PhotoForm());
 		oMAV.addObject("userid", oUser.getId());
 		oMAV.addObject("name", oUser.getUsername());
+		oMAV.addObject("id", oUser.getId());
 		return oMAV;
 	}
 
@@ -51,8 +52,9 @@ public class UploadController {
 		p.setLatitude(pform.getLatitude());
 		p.setLongitude(pform.getLongitude());
 		p.setUserId(pform.getUserId());
+		p.setDeleted(0);
 		mPhotoDao.save(p);
-		ModelAndView oMAV = new ModelAndView("upload");
+		ModelAndView oMAV = new ModelAndView("redirect:/user");
 		oMAV.addObject("name", oUser.getUsername());
 		return oMAV;
 

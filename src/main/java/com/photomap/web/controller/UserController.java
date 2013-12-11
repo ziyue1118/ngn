@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.photomap.web.dao.UserDao;
 import com.photomap.web.dao.impl.*;
 import com.photomap.web.model.Photo;
 import java.util.List;
@@ -17,7 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @RequestMapping("/user")
 public class UserController {
 	@Autowired
-	private IUserDao mUserDao;
+	private UserDao mUserDao;
 
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView handleRequest() throws Exception{
@@ -29,6 +31,7 @@ public class UserController {
 		ModelAndView oMAV = new ModelAndView("user");
 		oMAV.addObject("photos", photos);
 		oMAV.addObject("name", oUser.getUsername());
+		oMAV.addObject("id", oUser.getId());
 		return oMAV;
 	}
 }

@@ -9,5 +9,7 @@ public interface PhotoDao {
 	public List<Photo> findallbyUserId(int userid);
 	public List<Photo> findallPhotos();
 	public List<Photo> findallLatestPhotos();
+	public List<Photo> findbyLocation(double lat, double lng);
+	public void deletePhoto(int pPhotoId);
 	public void setDataSource(DataSource ds);
 }

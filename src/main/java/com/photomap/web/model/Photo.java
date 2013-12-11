@@ -12,7 +12,7 @@ public class Photo implements Serializable {
 	private double longitude;
 	private Timestamp createdTime;
 	private int userId;
-
+	private int deleted;
 
 	public Photo(){
 
@@ -41,6 +41,9 @@ public class Photo implements Serializable {
 	public int getUserId(){
 		return userId;
 	}
+	public int getDeleted(){
+		return deleted;
+	}
 
 	public void setPhotoId(int pid){
 		photoId = pid;
@@ -65,6 +68,9 @@ public class Photo implements Serializable {
 	}
 	public void setUserId(int id){
 		userId = id;
+	}
+	public void setDeleted(int pDeleted){
+		deleted = pDeleted;
 	}
 
 }

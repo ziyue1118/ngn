@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
-<p>Welcome to Map page</p>
+<p>${displayUser.username}'s photo map</p>
 
 	<div class="user-photo-wrapper">
 		<div class="map-wrapper">
