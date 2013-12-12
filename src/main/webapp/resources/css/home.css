@@ -82,6 +82,11 @@ body {
 .signup-input {
     width:189px;
 }
+div.error {
+    /* your rules */
+    padding:0;
+    color:#E20D0D;
+}
 .carousel-image {
     width:auto;
     height:300px;
@@ -112,7 +117,7 @@ body {
         clear: left;
 }
 #sign-up-box .box-content .sign-up-field {
-        margin-top: 20px;
+        margin-top: 18px;
         font-size:  13px;
 
 }

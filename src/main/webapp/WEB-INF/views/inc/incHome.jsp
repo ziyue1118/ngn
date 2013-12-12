@@ -62,15 +62,15 @@
         <form:form method="POST" action="/signup" commandName="signupForm">
             <div class="sign-up-field">
                 <form:label path="username" cssClass="label-wrapper">Username:</form:label>
-                <form:input path="username" cssClass="input-medium signup-input"/>
+                <form:input path="username" cssClass="input-medium signup-input" required="required"/>
             </div>
             <div class="sign-up-field">
                 <form:label path="password" cssClass="label-wrapper">Password:</form:label>
-                <form:input path="password" cssClass="input-medium signup-input" type="password"/>
+                <form:input path="password" cssClass="input-medium signup-input" type="password" required="required"/>
             </div>
             <div class="sign-up-field">
                 <form:label path="email" cssClass="label-wrapper">Email:</form:label>
-                <form:input path="email" cssClass ="input-medium signup-input" />
+                <form:input path="email" cssClass ="input-medium signup-input" required="required"/>
             </div>
             
             <div class = "sign-up-field">

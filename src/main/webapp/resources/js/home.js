@@ -28,7 +28,24 @@ $(document).ready(function() {
     }
   });
 });
- 
+$(document).ready(function(){
+  $("#signupForm").validate({
+    rules:{
+      username:"required",
+      password:{required:true, minlength:6},
+      email:{required:true, email: true}
+    },
+    messages: {
+      username: "Please enter your username",
+      password: {required: "Please provide your password",
+                 minlength: "Your password should be at least 6 characters long"},
+      email: "Please enter a valid email address"
+    },
+    errorElement: 'div'
+
+    
+  });
+}); 
 
 //function for maps
 var input = document.getElementById('pac-input');

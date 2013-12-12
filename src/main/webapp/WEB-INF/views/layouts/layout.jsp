@@ -26,5 +26,6 @@
     <script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
     <script src="<c:url value="/resources/js/home.js"/>"></script>
     <script src="<c:url value="/resources/js/jquery.fancybox.pack.js"/>"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
 </body>
 </html>
