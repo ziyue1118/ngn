@@ -3,7 +3,7 @@
 
 <c:if test="${not empty error}">
 <div class="errorblock">
-	Your login attempt was not successful, try again.<br /> Caused :
+	Your login attempt was not successful, try again.<br/> Caused :
 	${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}
 </div>
 </c:if>

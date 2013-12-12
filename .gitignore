@@ -1,6 +1,5 @@
 # Code #
 src/main/resources/AwsCredentials.properties
-src/main/resources/mysqldatabase.xml
 target/classes/AwsCredentials.properties
 # Files #
 *.class
