@@ -37,7 +37,7 @@ public class IPhotoDao implements PhotoDao {
 	}
 	
 	public List<Photo> findbyLocation(double lat, double lng){
-		String sql = "select * from Photos where lat = ? and lng = ? order by createtime DESC";
+		String sql = "select * from Photos where lat = ? and lng = ? and deleted = 0 order by createtime DESC";
 		List<Photo> photos = jdbctemp.query(sql, new Object[]{lat, lng}, new PhotoMapper());
 		return photos;
 	}
