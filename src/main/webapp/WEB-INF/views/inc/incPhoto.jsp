@@ -53,14 +53,4 @@
         })(marker, key));
     }
 </script>
-<!-- <c:forEach var="photo" items="${photos}">
-${photo.photoId}
-${photo.description}
-${photo.imgUrl}
-${photo.locationName}
-${photo.latitude}
-${photo.longitude}
-${photo.createdTime}
-${photo.userId}
-</br>
-</c:forEach> -->
+

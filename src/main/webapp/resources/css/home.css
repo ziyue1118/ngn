@@ -272,6 +272,26 @@ body {
     margin:10px;
     
 }
+.search-input-container {
+    width: 500px;
+    margin-top: 10px;
+    margin: auto;
+}
+#search-input {
+        background-color: #fff;
+        padding: 0 11px 0 13px;
+        width: 440px;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        text-overflow: ellipsis;
+       
+}
+.search-button {
+    display:inline;
+    margin-left:-7px;
+}
+
 .username-text-box {
     width:400px;
 }

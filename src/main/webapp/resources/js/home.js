@@ -28,7 +28,7 @@ $(document).ready(function() {
     }
   });
 });
-
+ 
 
 //function for maps
 var input = document.getElementById('pac-input');
@@ -95,7 +95,7 @@ function initmap() {
 });
 }
 google.maps.event.addDomListener(window, 'load', initmap);
-google.maps.event.addDomListener(window, 'load', pmap);
+
 
 
 $(document).ready(function() {
