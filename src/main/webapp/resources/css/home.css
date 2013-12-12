@@ -387,5 +387,7 @@ body {
     height:280px;
     width:380px;
 }
-
+.photo-scroll{
+    overflow: scroll;
+}
 

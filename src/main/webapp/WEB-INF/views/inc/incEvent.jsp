@@ -7,7 +7,7 @@
 			<img class="posting-photo" src="http://${mapphotos[user].imgUrl}">
 			<div class="posting-text-container">
 				<div class="username-text-box">
-					<div class="username-text" ><a href="/photo/${user.id}">${user.username}</a></div>
+					<div class="username-text" ><a href="/photo/${user.id}">${user.username}</a>(@${mapphotos[user].locationName})</div>
 					<div class="date-text">posted at ${mapphotos[user].createdTime}</div>
 				</div>
 				<div class="description-text-box"> 

@@ -18,24 +18,40 @@
 		{img: "${p.imgUrl}", pb:"${p.latitude}",qb:"${p.longitude}"},
 	</c:forEach>
 	];
+	var display = {}
+	<c:forEach var="p" items="${photos}" varStatus="loop">
+		if (display[["${p.latitude}","${p.longitude}"]]==undefined){
+			display[["${p.latitude}","${p.longitude}"]] = [];
+			display[["${p.latitude}","${p.longitude}"]].push({img: "${p.imgUrl}", pb:"${p.latitude}",qb:"${p.longitude}", des: "${p.description}"});
+		} 
+		else {
+			display[["${p.latitude}","${p.longitude}"]].push({img: "${p.imgUrl}", pb:"${p.latitude}",qb:"${p.longitude}", des: "${p.description}"});
+		} 
+	</c:forEach>
 	var infowindow = new google.maps.InfoWindow({
       maxWidth: 400,
       maxHeigth: 300
     });
-	for(var i=0;i<data.length;i++){
-		var l = new google.maps.LatLng(data[i].pb, data[i].qb, true);
-		var marker = new google.maps.Marker({
-			map:map,
-			position:l
-		});
-		google.maps.event.addListener(marker, 'click', (function(marker, i) {
+    for(var key in display){
+    	var l = new google.maps.LatLng(display[key][0].pb, display[key][0].qb, true);
+    	var marker = new google.maps.Marker({
+    		map:map,
+    		position:l
+    	});
+    	google.maps.event.addListener(marker, 'click', (function(marker, key) {
         return function() {
-          infowindow.setContent("<img class='map-window-photo' src=http://"+data[i].img+">");
+          var contentString = "<div class='photo-scroll'>";
+          for (var i=0;i<display[key].length;i++){
+          	contentString = contentString + "<a class='fancybox' rel='gallerymap' href=http://"+display[key][i].img + " title='" + display[key][i].des +"'>";
+          	contentString = contentString + "<img class='map-window-photo' src=http://"+display[key][i].img+">";
+          	contentString = contentString + "</a>";
+          }
+          contentString = contentString + "</div>";
+          infowindow.setContent(contentString);
           infowindow.open(map, marker);
          }
-        })(marker, i));
-		
-	}
+        })(marker, key));
+    }
 </script>
 <!-- <c:forEach var="photo" items="${photos}">
 ${photo.photoId}
