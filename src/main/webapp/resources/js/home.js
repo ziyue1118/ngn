@@ -98,12 +98,11 @@ google.maps.event.addDomListener(window, 'load', initmap);
 google.maps.event.addDomListener(window, 'load', pmap);
 
 
-function pmap(){
-  
-  
-}
+$(document).ready(function() {
+         $('.carousel').carousel({
+             interval: 3000
+         })
+}); 
 
-// $('#UploadModal').on('shown.bs.modal', function () {
-//     initmap();
-// });
+
 

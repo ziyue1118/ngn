@@ -11,21 +11,14 @@
 			<a href="/delete/${p.photoId}/">
 				<span class="glyphicon glyphicon-remove"></span>
 			</a>
+				<div class="photo-description-box">
+				${p.description}	
+				</div>	
 			</div>
 		</div>
 		</c:forEach>
 	</div>
 </div>
 
-<!-- <c:forEach var="photo" items="${photos}">
-${photo.photoId}
-${photo.description}
-${photo.imgUrl}
-${photo.locationName}
-${photo.latitude}
-${photo.longitude}
-${photo.createdTime}
-${photo.userId}
-</br>
-</c:forEach> -->
+
 
