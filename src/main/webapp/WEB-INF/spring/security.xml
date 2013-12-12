@@ -7,6 +7,8 @@
 		<intercept-url pattern="/events*" access="ROLE_USER" />
 		<intercept-url pattern="/photo*" access="ROLE_USER" />
 		<intercept-url pattern="/upload*" access="ROLE_USER"/>
+		<intercept-url pattern="/user*" access="ROLE_USER"/>
+		<intercept-url pattern="/delete*" access="ROLE_USER"/>
 
 		<form-login login-page="/login" default-target-url="/events"
 			authentication-failure-url="/loginfailed" />
