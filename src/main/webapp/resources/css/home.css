@@ -310,13 +310,32 @@ body {
     margin: 0px auto;
     width: 1000px;
 }
-.photo-container {
+.photo-container{
     width:240px;
     height:240px;
     margin-top:7px;
     margin-left:5px;
     margin-bottom:2px;
     display:inline-block;
+   
+}
+.photo-shadow{
+    position:relative;
+}
+.photo-shadow:hover span{
+    display:block;
+    opacity: 1.0;
+
+}
+.photo-shadow:hover {
+    opacity: 0.6;
+}
+
+.photo-shadow span {
+    position:absolute;
+    top:0;
+    right:0;
+    display: none;
 }
 .image-box {
     width:240px; 
@@ -326,6 +345,8 @@ body {
     width:500px;
     height:400px;
 }
+
+
 /*On upload page*/
 .upload-wrapper{
     background-color: #fff;
